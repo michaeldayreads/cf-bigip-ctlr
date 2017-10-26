@@ -93,7 +93,7 @@ ginkgo_test_with_profile () {
   (
     export GOBIN="$BUILDDIR/bin"
     echodo cd "$WKDIR/src/$PKGIMPORT"
-    echodo ginkgo -r compilers 1-keepGoing -trace -randomizeAllSpecs -progress --nodes 4 \
+    echodo ginkgo -r compilers 1 -keepGoing -trace -randomizeAllSpecs -progress --nodes 4 \
             ${BUILD_VARIANT_FLAGS} -- \
             -test.cpuprofile profile.cpu \
             -test.blockprofile profile.block \
